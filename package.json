@@ -7,8 +7,8 @@
     "start": "node ./dist/index",
     "build": "babel lib -d dist --ignore /public/ --presets latest",
     "start-dev": "nodemon ./lib/index.js --exec babel-node --presets latest",
-    "precommit": "npm run lint && npm test",
-    "test": "echo aaa"
+    "precommit": "npm build && npm test",
+    "test": "node -v"
   },
   "keywords": [],
   "author": "",
