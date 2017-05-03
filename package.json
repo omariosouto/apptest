@@ -7,7 +7,8 @@
     "start": "node ./dist/index",
     "build": "babel lib -d dist --ignore /public/ --presets latest",
     "start-dev": "nodemon ./lib/index.js --exec babel-node --presets latest",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "precommit": "npm run lint && npm test",
+    "test": "echo aaa"
   },
   "keywords": [],
   "author": "",
@@ -22,6 +23,7 @@
   "devDependencies": {
     "babel-cli": "^6.24.1",
     "babel-preset-latest": "^6.24.1",
+    "husky": "^0.13.3",
     "nodemon": "^1.11.0"
   }
 }
