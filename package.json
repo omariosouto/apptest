@@ -4,7 +4,7 @@
   "description": "",
   "main": "./dist/index.js",
   "scripts": {
-    "start": "npm run build && node ./dist/index",
+    "start": "node ./dist/index",
     "build": "babel lib -d dist --ignore /public/ --presets latest",
     "start-dev": "nodemon ./lib/index.js --exec babel-node --presets latest",
     "test": "echo \"Error: no test specified\" && exit 1"
