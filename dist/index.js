@@ -12,6 +12,12 @@ app.get('/', function (req, res) {
   res.send('Hello World!');
 });
 
-app.listen(3000, function () {
-  console.log('Example app listening on port 3000!');
+// start the server
+var port = process.env.PORT || 3000;
+var env = process.env.NODE_ENV || 'production';
+app.listen(port, function (err) {
+  if (err) {
+    return console.error(err);
+  }
+  console.info('Server running on http://localhost:' + port + ' [' + env + ']');
 });
